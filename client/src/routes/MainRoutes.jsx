@@ -1,15 +1,15 @@
 import { Route, Routes } from 'react-router-dom'
-import Home from './pages/students/Home'
-import CourseList from './pages/students/CourseList';
-import CourseDetails from './pages/students/CourseDetails';
-import MyEnrolments from './pages/students/MyEnrolments';
-import Player from './pages/students/Player';
-import Loading from './components/students/Loading';
-import Educator from './pages/educators/Educator';
-import Dashboard from './pages/educators/Dashboard';
-import AddCourse from './pages/educators/AddCourse';
-import MyCourses from './pages/educators/MyCourses';
-import StudentEnrolled from './pages/educators/StudentEnrolled';
+import Home from '../pages/students/Home'
+import CourseList from '../pages/students/CourseList';
+import CourseDetails from '../pages/students/CourseDetails'
+import MyEnrolments from './../pages/students/MyEnrolments';
+import Player from './../pages/students/Player';
+import Loading from './../components/students/Loading';
+import Educator from './../pages/educators/Educator';
+import Dashboard from './../pages/educators/Dashboard';
+import AddCourse from './../pages/educators/AddCourse';
+import MyCourses from './../pages/educators/MyCourses';
+import StudentEnrolled from './../pages/educators/StudentEnrolled';
 
 const MainRoutes = () => {
   return (
