@@ -1,4 +1,5 @@
 import { assets } from "./../../assets/assets";
+import Searchbar from "./Searchbar";
 
 const Hero = () => {
   return (
@@ -20,6 +21,7 @@ const Hero = () => {
       <p className="md:hidden block text-gray-500 dark:text-gray-300 max-w-sm mx-auto">
         We bring together world-class instructors to help you achieve your professional goals.
       </p>
+      <Searchbar/>
     </div>
   );
 };
