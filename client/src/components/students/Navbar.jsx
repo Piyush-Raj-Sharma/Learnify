@@ -23,7 +23,7 @@ const Navbar = () => {
       <img
         src={assets.logo}
         alt="Logo"
-        className="w-28 lg:w-32 cursor-pointer"
+        className="w-28 lg:w-32 cursor-pointer dark:invert"
       />
 
       {/* Desktop Navigation */}
@@ -51,25 +51,30 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       <div className="md:hidden flex items-center gap-3 text-gray-700 dark:text-white">
-        {user?.isSignedIn &&
-        <>
-        <button className="hover:underline text-sm sm:text-base">
-          Become Educator
-        </button>
-        <NavLink
-          to="/my-enrollments"
-          className="hover:underline text-sm sm:text-base"
-        >
-          My Enrollments
-        </NavLink>
-        </>}
-        {user?.isSignedIn? <UserButton /> : <button onClick={() => openSignIn()}>
-          <img
-            src={assets.user_icon}
-            alt="User"
-            className="w-6 h-6 object-contain"
-          />
-        </button>}
+        {user?.isSignedIn && (
+          <>
+            <button className="hover:underline text-sm sm:text-base">
+              Become Educator
+            </button>
+            <NavLink
+              to="/my-enrollments"
+              className="hover:underline text-sm sm:text-base"
+            >
+              My Enrollments
+            </NavLink>
+          </>
+        )}
+        {user?.isSignedIn ? (
+          <UserButton />
+        ) : (
+          <button onClick={() => openSignIn()}>
+            <img
+              src={assets.user_icon}
+              alt="User"
+              className="w-6 h-6 object-contain dark:invert"
+            />
+          </button>
+        )}
         <ThemeToggle />
       </div>
     </div>
