@@ -13,6 +13,9 @@ export default {
         'home-heading-small' : ['28px', '36px'],
         'home-heading-large' : ['48px', '56px'],
         'default' : ['15px', '21px']
+      },
+      gridTemplateColumns: {
+        'auto': 'repeat(auto-fit, minmax(200px, 1fr))'
       }
     },
   },
