@@ -10,7 +10,7 @@ const Navbar = () => {
   const isCourseListPage = location.pathname.includes("/course-list");
   const { openSignIn } = useClerk();
   const user = useUser();
-  const {navigate} = useContext(AppContext);
+  const { navigate, isEducator, setIsEducator } = useContext(AppContext);
   console.log(user);
 
   return (
@@ -25,7 +25,7 @@ const Navbar = () => {
       <img
         src={assets.logo}
         alt="Logo"
-        onClick={navigate('/')}
+        onClick={navigate("/")}
         className="w-28 lg:w-32 cursor-pointer dark:invert"
       />
 
@@ -33,7 +33,12 @@ const Navbar = () => {
       <div className="hidden md:flex items-center gap-6 text-gray-700 dark:text-white">
         {user?.isSignedIn && (
           <>
-            <button className="hover:underline">Become Educator</button>
+            <button
+              className="hover:underline"
+              onClick={() => navigate("/educator")}
+            >
+              {isEducator ? "Educator Dashboard" : "Become Educator"}
+            </button>
             <NavLink to="/my-enrollments" className="hover:underline">
               My Enrollments
             </NavLink>
@@ -56,8 +61,11 @@ const Navbar = () => {
       <div className="md:hidden flex items-center gap-3 text-gray-700 dark:text-white">
         {user?.isSignedIn && (
           <>
-            <button className="hover:underline text-sm sm:text-base">
-              Become Educator
+            <button
+              className="hover:underline"
+              onClick={() => navigate("/educator")}
+            >
+              {isEducator ? "Educator Dashboard" : "Become Educator"}
             </button>
             <NavLink
               to="/my-enrollments"
