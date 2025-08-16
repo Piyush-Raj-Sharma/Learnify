@@ -11,7 +11,7 @@ const Navbar = () => {
   const { openSignIn } = useClerk();
   const user = useUser();
   const { navigate, isEducator, setIsEducator } = useContext(AppContext);
-  console.log(user);
+  // console.log(user);
 
   return (
     <div
@@ -25,7 +25,7 @@ const Navbar = () => {
       <img
         src={assets.logo}
         alt="Logo"
-        onClick={navigate("/")}
+        onClick={() => navigate("/")}
         className="w-28 lg:w-32 cursor-pointer dark:invert"
       />
 
