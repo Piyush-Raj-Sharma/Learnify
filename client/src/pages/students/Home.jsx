@@ -1,6 +1,7 @@
 import CallToAction from "../../components/students/CallToAction";
 import Companies from "../../components/students/Companies";
 import CourseSection from "../../components/students/CourseSection";
+import Footer from "../../components/students/Footer";
 import Hero from "../../components/students/Hero";
 import Testimonial from "../../components/students/Testimonial";
 
@@ -12,6 +13,7 @@ const Home = () => {
     <CourseSection/>
     <Testimonial/>
     <CallToAction/>
+    <Footer/>
   </div>;
 };
 

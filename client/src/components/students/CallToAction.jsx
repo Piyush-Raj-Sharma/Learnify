@@ -13,7 +13,7 @@ const CallToAction = () => {
         <button className="bg-blue-600 text-white px-10 py-3 rounded-md ">
           Get Started 
           </button>
-        <button className="flex items-center gap-2"        >
+        <button className="flex items-center gap-2">
           Learn More <img src={assets.arrow_icon} alt="arrow_icon" />
           </button>
       </div>
